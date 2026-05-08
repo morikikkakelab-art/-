@@ -51,6 +51,25 @@
 ```
 
 ### 保管場所
+
+#### ルートディレクトリ直下
+- **docs/**: セットアップドキュメント・スキル仕様書
+  - `NOTION_SETUP.md`: Notionワークスペース構築ガイド
+  - `SKILLS.md`: 社員エージェントのスキル仕様書
+- **scripts/**: 開発・セットアップスクリプト
+  - `setup-notion.js`: Notion自動セットアップスクリプト
+  - `notion-structure.json`: Notion階層構造定義
+- **skills/**: 社員スキルドキュメント（詳細版）
+  - `README.md`: スキル体系概要
+  - `SKILL_STRUCTURE.md`: スキル階層構造ガイド
+  - `00_common/`: 全員共有スキル
+  - `01_kikkake_media/`: きっかけLab.責任者スキル
+  - `02_luna/`: Luna責任者スキル
+  - `03_accounting/`: 経理責任者スキル
+  - `04_technology/`: 技術・商品企画責任者スキル
+  - `05_improvement/`: 事業改善責任者スキル
+
+#### context/（事業・運用データ）
 - **日記・思考ログ**: `context/日記・思考ログ/[年月]/`
 - **営業・商談**: `context/[事業名]/営業管理/商談ログ/`
 - **SNS運用**: `context/[事業名]/SNS運用/`
