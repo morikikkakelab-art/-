@@ -1,0 +1,247 @@
+{
+  "workspace": {
+    "name": "きっかけLab. / Luna ワークスペース",
+    "icon": "🚀",
+    "pages": [
+      {
+        "id": "business_sales",
+        "title": "🎯 事業・営業管理",
+        "icon": "🎯",
+        "pages": [
+          {
+            "id": "kikkakelab",
+            "title": "きっかけLab.",
+            "icon": "📱",
+            "databases": [
+              {
+                "name": "商談ログ",
+                "description": "営業・商談記録",
+                "properties": {
+                  "日付": { "type": "date" },
+                  "顧客名": { "type": "title" },
+                  "内容": { "type": "text" },
+                  "金額": { "type": "number" },
+                  "ステータス": { "type": "select", "options": ["初期接触", "提案中", "交渉中", "成約", "終了"] },
+                  "次のアクション": { "type": "text" },
+                  "進捗": { "type": "select", "options": ["新規", "進行中", "完了", "失注"] }
+                }
+              },
+              {
+                "name": "営業進捗",
+                "description": "月間営業進捗管理",
+                "properties": {
+                  "月": { "type": "date" },
+                  "新規クライアント": { "type": "number" },
+                  "継続クライアント": { "type": "number" },
+                  "売上目標": { "type": "number" },
+                  "売上実績": { "type": "number" },
+                  "達成率": { "type": "number" },
+                  "課題": { "type": "text" }
+                }
+              },
+              {
+                "name": "SNS運用",
+                "description": "SNS投稿管理・スケジュール",
+                "properties": {
+                  "投稿日": { "type": "date" },
+                  "プラットフォーム": { "type": "select", "options": ["Instagram", "Twitter", "Facebook", "TikTok", "LinkedIn"] },
+                  "投稿内容": { "type": "text" },
+                  "エンゲージメント": { "type": "number" },
+                  "ステータス": { "type": "select", "options": ["下書き", "予約済み", "公開済み", "完了"] }
+                }
+              }
+            ]
+          },
+          {
+            "id": "luna",
+            "title": "Luna",
+            "icon": "🎬",
+            "databases": [
+              {
+                "name": "商談ログ",
+                "description": "営業・商談記録",
+                "properties": {
+                  "日付": { "type": "date" },
+                  "顧客名": { "type": "title" },
+                  "プロジェクト内容": { "type": "text" },
+                  "金額": { "type": "number" },
+                  "ステータス": { "type": "select", "options": ["初期接触", "提案中", "交渉中", "成約", "終了"] },
+                  "納期": { "type": "date" },
+                  "進捗": { "type": "select", "options": ["新規", "進行中", "完了", "失注"] }
+                }
+              },
+              {
+                "name": "営業進捗",
+                "description": "プロジェクト進捗管理",
+                "properties": {
+                  "月": { "type": "date" },
+                  "新規プロジェクト": { "type": "number" },
+                  "進行中プロジェクト": { "type": "number" },
+                  "売上目標": { "type": "number" },
+                  "売上実績": { "type": "number" },
+                  "達成率": { "type": "number" }
+                }
+              },
+              {
+                "name": "クリエイティブ管理",
+                "description": "撮影・制作案件管理",
+                "properties": {
+                  "撮影日": { "type": "date" },
+                  "クライアント": { "type": "title" },
+                  "撮影内容": { "type": "text" },
+                  "納期": { "type": "date" },
+                  "ステータス": { "type": "select", "options": ["企画中", "撮影待ち", "撮影済み", "編集中", "納品済み"] },
+                  "品質チェック": { "type": "checkbox" }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "finance",
+        "title": "💰 経理・財務",
+        "icon": "💰",
+        "databases": [
+          {
+            "name": "売上管理",
+            "description": "月間売上記録",
+            "properties": {
+              "日付": { "type": "date" },
+              "顧客名": { "type": "title" },
+              "金額": { "type": "number" },
+              "内容": { "type": "text" },
+              "事業": { "type": "select", "options": ["きっかけLab.", "Luna"] },
+              "入金状況": { "type": "select", "options": ["未払い", "支払済み"] }
+            }
+          },
+          {
+            "name": "経費管理",
+            "description": "経費申請・承認管理",
+            "properties": {
+              "申請日": { "type": "date" },
+              "申請者": { "type": "title" },
+              "金額": { "type": "number" },
+              "内容": { "type": "text" },
+              "領収書": { "type": "files" },
+              "ステータス": { "type": "select", "options": ["申請中", "承認待ち", "承認済み", "却下"] }
+            }
+          },
+          {
+            "name": "請求書管理",
+            "description": "請求書発行・管理",
+            "properties": {
+              "発行日": { "type": "date" },
+              "顧客名": { "type": "title" },
+              "金額": { "type": "number" },
+              "内容": { "type": "text" },
+              "支払期限": { "type": "date" },
+              "ステータス": { "type": "select", "options": ["下書き", "発行済み", "支払済み"] }
+            }
+          }
+        ]
+      },
+      {
+        "id": "technology",
+        "title": "🛠️ 技術・商品企画",
+        "icon": "🛠️",
+        "databases": [
+          {
+            "name": "ツール開発",
+            "description": "ツール開発プロジェクト",
+            "properties": {
+              "プロジェクト名": { "type": "title" },
+              "説明": { "type": "text" },
+              "優先度": { "type": "select", "options": ["高", "中", "低"] },
+              "ステータス": { "type": "select", "options": ["企画中", "開発中", "テスト中", "リリース済み", "保守中"] },
+              "期限": { "type": "date" }
+            }
+          },
+          {
+            "name": "機能要望",
+            "description": "営業からの機能要望",
+            "properties": {
+              "要望内容": { "type": "title" },
+              "要望元": { "type": "text" },
+              "優先度": { "type": "select", "options": ["高", "中", "低"] },
+              "ステータス": { "type": "select", "options": ["検討中", "承認待ち", "開発予定", "開発中", "完了"] },
+              "期限": { "type": "date" }
+            }
+          },
+          {
+            "name": "ロードマップ",
+            "description": "開発ロードマップ",
+            "properties": {
+              "四半期": { "type": "select", "options": ["Q1", "Q2", "Q3", "Q4"] },
+              "計画内容": { "type": "title" },
+              "目標": { "type": "text" },
+              "ステータス": { "type": "select", "options": ["計画中", "進行中", "完了", "延期"] }
+            }
+          }
+        ]
+      },
+      {
+        "id": "improvement",
+        "title": "📈 事業改善",
+        "icon": "📈",
+        "databases": [
+          {
+            "name": "KPI管理",
+            "description": "月間KPI追跡",
+            "properties": {
+              "月": { "type": "date" },
+              "KPI項目": { "type": "title" },
+              "目標値": { "type": "number" },
+              "実績値": { "type": "number" },
+              "達成率": { "type": "number" },
+              "担当者": { "type": "text" }
+            }
+          },
+          {
+            "name": "改善施策",
+            "description": "実施中の改善施策",
+            "properties": {
+              "施策名": { "type": "title" },
+              "目的": { "type": "text" },
+              "担当者": { "type": "text" },
+              "ステータス": { "type": "select", "options": ["企画中", "実施中", "完了", "棚上げ"] },
+              "期限": { "type": "date" }
+            }
+          },
+          {
+            "name": "スクール・コミュニティ",
+            "description": "スクール・コミュニティ運営",
+            "properties": {
+              "コンテンツ名": { "type": "title" },
+              "説明": { "type": "text" },
+              "公開日": { "type": "date" },
+              "ステータス": { "type": "select", "options": ["企画中", "制作中", "公開中", "終了"] }
+            }
+          }
+        ]
+      },
+      {
+        "id": "other",
+        "title": "📝 その他",
+        "icon": "📝",
+        "pages": [
+          {
+            "id": "diary",
+            "title": "日記・思考ログ",
+            "icon": "📔"
+          },
+          {
+            "id": "input",
+            "title": "一次情報・インプット",
+            "icon": "📚"
+          },
+          {
+            "id": "members",
+            "title": "社員リスト",
+            "icon": "👥"
+          }
+        ]
+      }
+    ]
+  }
+}
